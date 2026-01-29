@@ -112,9 +112,10 @@ body{
 
 .FirstElement{
    display:flex;
-   justify-content: space-around;
+   justify-content: center;
    align-items: center;
    padding-top: 5rem; 
+   gap: 5rem;
 } 
 
 .FirstElement.adjusted-padding {
@@ -239,6 +240,7 @@ profile-photo .img{
 
 .education-content .row{
   display: flex;
+  justify-content: space-between;
   border-radius: 5px;
   height: 400px;
   margin-bottom: 250px;
@@ -251,8 +253,8 @@ profile-photo .img{
 .education-content .row .internship
 {
   color: #e5e5e5;
-  flex:0 0 50%;
-  max-width: 50%;
+  flex:0 0 48%;
+  max-width: 48%;
   margin-top: 30px;
 } 
 .education-content  h3.title{
@@ -271,6 +273,7 @@ profile-photo .img{
   border-radius: 10px;
   width: 100%;
   position: relative;
+  height: 100%;
 }
 .education-content .row .timeline-item{
   position:relative;
@@ -342,8 +345,9 @@ profile-photo .img{
 }
 .projects{
   display: flex;
-  justify-content:space-between;
+  justify-content:center;
   flex-wrap: wrap;
+  gap: 2%;
 }
 .project{
     /* padding: 30px 15px; */
@@ -539,4 +543,32 @@ profile-photo .img{
 }
 .tech{
   border: none;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.skills-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.skills-track {
+  display: flex;
+  width: fit-content;
+  animation: marquee 30s linear infinite;
+}
+
+.skills-marquee:hover .skills-track {
+  animation-play-state: paused;
+}
+
+.project.tech {
+    flex-shrink: 0;
+    margin: 0 1rem;
+    border: none;
+    width: auto;
+    flex-basis: auto;
 }

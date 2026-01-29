@@ -7,19 +7,19 @@
 return [
     // Site Meta Information
     'site' => [
-        'title' => 'Sadhasivam',
+        'title' => 'Sadhasivam Sekar',
         'favicon' => 'https://i.ibb.co/zRsTj3p/Frame-1-37.png',
         'copyright_year' => date('Y'),
     ],
 
     // Personal Information
     'personal' => [
-        'name' => 'Sadhasivam',
+        'name' => 'Sadhasivam Sekar',
         'greeting' => "Hi I'm",
-        'tagline' => 'Welcome to my portfolio website! I\'m a passionate and aspiring software engineer with a strong desire to create innovative solutions and push the boundaries of technology. With a deep love for coding and problem-solving, I am constantly seeking opportunities to learn and grow in this ever-evolving field',
+        'tagline' => 'Associate Software Engineer',
         'profile_image' => 'files/pass.png',
         'signature_image' => 'files/signaturecropped.png',
-        'resume_file' => 'files/sadhasivam_resume_softwareDeveloper.pdf',
+        'resume_file' => 'files/sadhasivam_resume.pdf',
         'email' => 'sadha30102001@gmail.com',
     ],
 
@@ -27,17 +27,16 @@ return [
     'about' => [
         'title' => 'About Me',
         'description' => [
-            'I am completed Bachelor\'s Degree in Information Technology. I have built a solid foundation in software development, particularly in areas such as Java, PHP, SQL, JavaScript, and GitHub.',
-            'My expertise in these areas allows me to approach projects with confidence and deliver high-quality results. I have a strong belief in the value of continuous learning and staying adaptable in the ever-evolving world of software engineering.',
-            'I actively seek out opportunities to expand my knowledge and skills, embracing new technologies and approaches. Feel free to explore my work and get in touch if you have any questions or opportunities to collaborate.',
+            'Performance-driven Backend Developer with 2 years of experience architecting scalable web applications within the Laravel ecosystem. Experienced in implementing robust API services, optimizing database performance, and writing clean, testable code following SOLID principles.',
+            'Skilled in building high-availability systems, leveraging advanced Eloquent ORM strategies and caching mechanisms to reduce latency and improve server efficiency.',
+            'Dedicated to maintaining codebase integrity through rigorous unit testing, ensuring seamless deployments and long-term project maintainability.',
         ],
         'details' => [
-            'Name' => 'Sadhasivam',
-            'Age' => '21',
+            'Name' => 'Sadhasivam Sekar',
             'From' => 'India',
             'Email' => 'sadha30102001@gmail.com',
             'Availability' => 'Fulltime',
-            'Experience' => 'Fresher',
+            'Experience' => '2 years',
         ],
     ],
 
@@ -54,13 +53,8 @@ return [
             'title' => 'GitHub',
         ],
         [
-            'icon' => 'fa fa-code',
-            'url' => 'https://leetcode.com/sadhasivamsekar/',
-            'title' => 'LeetCode',
-        ],
-        [
             'icon' => 'fa-brands fa-linkedin',
-            'url' => 'https://www.linkedin.com/in/sadhasivam-sekar-452306205/',
+            'url' => 'https://www.linkedin.com/in/sadhasivam-sekar/',
             'title' => 'LinkedIn',
         ],
     ],
@@ -69,6 +63,7 @@ return [
     'navigation' => [
         ['label' => 'Home', 'href' => '#home'],
         ['label' => 'About', 'href' => '#about'],
+        ['label' => 'Experience', 'href' => '#experience'],
         ['label' => 'Education', 'href' => '#education'],
         ['label' => 'Projects', 'href' => '#projects'],
         ['label' => 'Skills', 'href' => '#skills'],
@@ -78,65 +73,56 @@ return [
     // Education
     'education' => [
         [
-            'title' => 'B.Tech Information Technology - 76%',
-            'institution' => 'University College of Engineering Anna University',
-            'period' => '2019 - 2023',
+            'title' => 'B. Tech Information Technology',
+            'institution' => 'University College of Engineering Anna University (BIT Campus)',
+            'period' => '2019 – 2023',
         ],
         [
-            'title' => 'HSC - 78%',
-            'institution' => 'Dawn Matric Higher Secondary school',
-            'period' => '2018 - 2019',
-        ],
-        [
-            'title' => 'SSLC - 89%',
-            'institution' => 'Dawn Matric Higher Secondary school',
-            'period' => '2016 - 2017',
+            'title' => 'Higher Secondary (Class 12) & SSLC (Class 10)',
+            'institution' => 'Dawn Matric Hr Sec School',
+            'period' => '2016 – 2019',
         ],
     ],
 
-    // Certifications
-    'certifications' => [
+    // Work Experience
+    'experience' => [
         [
-            'title' => 'Project on Personal Expense Tracker Application',
-            'issuer' => 'ICT Academy',
-            'date' => 'FEB - 2023',
-            'certificate_url' => 'https://courses.ictacademy.skillsnetwork.site/certificates/6a4ae63aa2ca47fcab7db39b0c7c3e02',
-        ],
-        [
-            'title' => 'Ethical Hacking for Beginners',
-            'issuer' => 'Simplilearn',
-            'date' => 'JAN - 2022',
-            'certificate_url' => 'https://drive.google.com/file/d/1zHTT8xoDELlW3t4ncfqoNuEhxewxm7Vl/view',
-        ],
+            'title' => 'Associate Software Engineer',
+            'company' => 'Ladybird Web Solution Pvt Ltd.',
+            'period' => '2023 - Present',
+            'description' => 'Architecting scalable web applications within the Laravel ecosystem. Implementing robust API services, optimizing database performance, and writing clean, testable code following SOLID principles. Enhanced application security through advanced request validation, rate limiting, and bot-mitigation mechanisms, reducing malicious traffic and improving transaction reliability.'
+        ]
     ],
 
     // Projects
     'projects' => [
         [
-            'icon' => 'fa fa-coffee',
-            'title' => 'Cloud File Storage using Blockchain',
-            'description' => 'Technologies like IPFS, Blockchain, ReactJS, and NodeJS, implementing smart contracts with Solidity on the Ethereum blockchain. The goal was to manage file ownership, access control, and incentivized storage mechanisms. I also integrated IPFS for secure and distributed file storage and retrieval.',
+            'icon' => 'fa fa-robot',
+            'title' => 'Crypto Trading Bot',
+            'description' => 'Designed and developed an automated cryptocurrency trading system to reduce manual and emotion-driven trading. Integrated external exchange APIs to fetch real-time market data and trigger trade actions programmatically. Implemented rule-based trading logic to execute trades consistently based on predefined strategies. Added configurable parameters to easily adjust trading behavior without changing core implementation.',
+            'link' => 'https://github.com/sadhahacker/Crypto-Trading-Bot',
         ],
         [
-            'icon' => 'fa fa-car',
-            'title' => 'REST API for Student Profile Management',
-            'description' => 'Developed using Java, MongoDB, and Android Studio, this API boasts a user-friendly interface, empowering school administrators to perform CRUD operations effectively. It provides complete control over student profiles, allowing administrators to create, read, update, and delete profiles with ease.',
-        ],
-        [
-            'icon' => 'fa fa-desktop',
-            'title' => 'Weather Application',
-            'description' => 'A weather application utilizes a weather API to fetch and display real-time meteorological data, offering users accurate and up-to-date information on temperature, humidity, wind speed, and forecasts.',
+            'icon' => 'fa fa-language',
+            'title' => 'LinguaBot',
+            'description' => 'Designed and developed a flexible solution to convert bulk key–value inputs into multiple structured output formats. Designed a text-based interface supporting multi-key and multi-input entries to streamline batch conversions. Implemented automated transformation of inputs into formats such as JSON, PHP arrays, and other structured representations. Integrated multiple AI models to enable intelligent formatting and flexible output generation.',
+            'link' => 'https://github.com/sadhahacker/LinguaBot',
         ],
     ],
 
     // Skills
     'skills' => [
-        ['icon' => 'fa-brands fa-java', 'name' => 'Java'],
-        ['icon' => 'fa-brands fa-php', 'name' => 'PHP'],
-        ['icon' => 'fa-solid fa-database', 'name' => 'MySQL'],
-        ['icon' => 'fa-brands fa-html5', 'name' => 'HTML'],
-        ['icon' => 'fa-brands fa-css3-alt', 'name' => 'CSS'],
-        ['icon' => 'fa-brands fa-js', 'name' => 'JavaScript'],
+        ['name' => 'PHP', 'icon' => 'fa-brands fa-php'],
+        ['name' => 'Java', 'icon' => 'fa-brands fa-java'],
+        ['name' => 'JavaScript', 'icon' => 'fa-brands fa-js'],
+        ['name' => 'SQL', 'icon' => 'fa-solid fa-database'],
+        ['name' => 'Laravel', 'icon' => 'fa-brands fa-laravel'],
+        ['name' => 'RESTful APIs', 'icon' => 'fa-solid fa-cloud'],
+        ['name' => 'MySQL', 'icon' => 'fa-solid fa-database'],
+        ['name' => 'Git', 'icon' => 'fa-brands fa-git-alt'],
+        ['name' => 'GitHub', 'icon' => 'fa-brands fa-github'],
+        ['name' => 'Postman', 'icon' => 'fa-solid fa-rocket'],
+        ['name' => 'Linux', 'icon' => 'fa-brands fa-linux'],
     ],
 
     // Contact Section

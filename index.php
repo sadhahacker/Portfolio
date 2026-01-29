@@ -108,11 +108,32 @@ function e($string) {
       </div>
     </section>
 
-    <!-------------- Education & Internship -------------->
-    <section class="education-content" id="education">
+    <!-------------- Education & Experience -------------->
+    <section class="education-content" id="experience">
       <div class="container">
         <div class="row">
           <div class="education">
+            <h3 class="title">Experience</h3>
+            <div class="row">
+              <div class="timeline-box">
+                <div class="timeline">
+                  <?php foreach ($content['experience'] as $exp): ?>
+                  <!-- Timeline-item -->
+                  <div class="timeline-item">
+                    <div class="circle-dot"></div>
+                    <h3 class="timeline-title"><?php echo e($exp['title']); ?></h3>
+                    <h4 class="timeline-title"><?php echo e($exp['company']); ?></h4>
+                    <h4 class="timeline-title">
+                      <i class="fa fa-calendar"></i> <?php echo e($exp['period']); ?>
+                    </h4>
+                    <p style="text-align: justify;"><?php echo e($exp['description']); ?></p>
+                  </div>
+                  <?php endforeach; ?>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="internship" id="education">
             <h3 class="title">Education</h3>
             <div class="row">
               <div class="timeline-box">
@@ -126,34 +147,6 @@ function e($string) {
                     <h4 class="timeline-title">
                       <i class="fa fa-calendar"></i> <?php echo e($edu['period']); ?>
                     </h4>
-                  </div>
-                  <?php endforeach; ?>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="internship">
-            <h3 class="title">Certifications</h3>
-            <div class="row">
-              <div class="timeline-box">
-                <div class="timeline">
-                  <?php foreach ($content['certifications'] as $cert): ?>
-                  <!-- Timeline-item -->
-                  <div class="timeline-item">
-                    <div class="circle-dot"></div>
-                    <h3 class="timeline-title"><?php echo e($cert['title']); ?></h3>
-                    <h4 class="timeline-title"><?php echo e($cert['issuer']); ?></h4>
-                    <h4 class="timeline-title">
-                      <i class="fa fa-calendar"></i> <?php echo e($cert['date']); ?>
-                    </h4>
-                    <div class="btn-group" style="margin: 42.5px 0">
-                      <a
-                        href="<?php echo e($cert['certificate_url']); ?>"
-                        target="_blank"
-                        class="btn active"
-                        >View</a
-                      >
-                    </div>
                   </div>
                   <?php endforeach; ?>
                 </div>
@@ -191,13 +184,15 @@ function e($string) {
           <h4>Skills</h4>
           <p>Languages I Speak</p>
         </div>
-        <div class="projects">
-          <?php foreach ($content['skills'] as $skill): ?>
-          <div class="project tech">
-            <i class="<?php echo e($skill['icon']); ?>"></i>
-            <h4><?php echo e($skill['name']); ?></h4>
+        <div class="skills-marquee">
+          <div class="skills-track">
+            <?php foreach (array_merge($content['skills'], $content['skills']) as $skill): ?>
+              <div class="project tech">
+                <i class="<?php echo e($skill['icon']); ?>"></i>
+                <h4><?php echo e($skill['name']); ?></h4>
+              </div>
+            <?php endforeach; ?>
           </div>
-          <?php endforeach; ?>
         </div>
       </div>
     </section>
