@@ -64,22 +64,48 @@ $(document).ready(function() {
       origin: "bottom"
     });
 
-  //contact form to excel sheet
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyUd_e_iYrGnq_KaJF3EnvVtbjHv8F7NRgPIOoTxjL_FVXnEIP735yTml53Oz04G_Q/exec';
+  //contact form to PHP handler (stored in JSON)
   const form = document.forms['submitToGoogleSheet']
   const msg = document.getElementById("msg")
 
   form.addEventListener('submit', e => {
       e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then(response => {
-              msg.innerHTML = "Message sent successfully"
+      
+      // Disable submit button during submission
+      const submitBtn = form.querySelector('.submit');
+      submitBtn.disabled = true;
+      submitBtn.value = 'Sending...';
+      
+      fetch('contact_handler.php', { 
+          method: 'POST', 
+          body: new FormData(form)
+      })
+          .then(response => response.json())
+          .then(data => {
+              if (data.success) {
+                  msg.innerHTML = data.message;
+                  msg.style.color = '#4CAF50';
+                  form.reset();
+              } else {
+                  msg.innerHTML = data.message || 'Something went wrong. Please try again.';
+                  msg.style.color = '#f44336';
+              }
               setTimeout(function () {
                   msg.innerHTML = ""
               }, 5000)
-              form.reset()
           })
-          .catch(error => console.error('Error!', error.message))
+          .catch(error => {
+              console.error('Error!', error.message);
+              msg.innerHTML = 'Failed to send message. Please try again later.';
+              msg.style.color = '#f44336';
+              setTimeout(function () {
+                  msg.innerHTML = ""
+              }, 5000)
+          })
+          .finally(() => {
+              submitBtn.disabled = false;
+              submitBtn.value = 'Send Message';
+          })
   })
     
   });
