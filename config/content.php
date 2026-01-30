@@ -19,7 +19,7 @@ return [
         'tagline' => 'Associate Software Engineer',
         'profile_image' => 'files/pass.png',
         'signature_image' => 'files/signaturecropped.png',
-        'resume_file' => 'files/sadhasivam_resume.pdf',
+        'resume_file' => 'files/SadhaResume.pdf',
         'email' => 'sadha30102001@gmail.com',
     ],
 
